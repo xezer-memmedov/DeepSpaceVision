@@ -1,0 +1,65 @@
+# ==================================
+# DeepSpaceVision - .gitignore
+# ==================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# Virtual Environment
+venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model weights (too large for git)
+models/*.pt
+models/*.onnx
+models/*.engine
+!models/.gitkeep
+
+# Training runs
+runs/
+
+# Results (regeneratable)
+results/*.jpg
+results/*.png
+results/*.mp4
+!results/.gitkeep
+
+# Dataset images (download separately)
+data/images/train/
+data/images/val/
+data/images/test/
+data/labels/train/
+data/labels/val/
+data/labels/test/
+!data/.gitkeep
+!data/images/.gitkeep
+!data/labels/.gitkeep
+
+# Large files
+*.zip
+*.tar.gz
+*.h5
+*.hdf5

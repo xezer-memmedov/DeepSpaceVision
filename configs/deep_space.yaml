@@ -1,0 +1,49 @@
+# DeepSpaceVision - YOLOv8 Dataset Configuration
+# ================================================
+
+# Dataset paths (relative to project root)
+path: ./data
+train: images/train
+val: images/val
+test: images/test
+
+# Number of classes
+nc: 3
+
+# Class names
+names:
+  0: nebula      # Dumanlıq - Emission, reflection, planetary nebulae
+  1: galaxy      # Qalaktika - Spiral, elliptical, irregular galaxies
+  2: star_cluster # Ulduz Topası - Open and globular star clusters
+
+# Class colors for visualization (BGR format)
+colors:
+  nebula: [255, 100, 50]       # Mavi-bənövşəyi
+  galaxy: [50, 255, 150]       # Yaşıl
+  star_cluster: [50, 150, 255] # Narıncı-sarı
+
+# Training hyperparameters
+# These can be overridden via command line
+hyperparameters:
+  lr0: 0.01          # Initial learning rate
+  lrf: 0.01          # Final learning rate (lr0 * lrf)
+  momentum: 0.937    # SGD momentum
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  warmup_momentum: 0.8
+  box: 7.5           # Box loss gain
+  cls: 0.5           # Class loss gain
+  dfl: 1.5           # Distribution focal loss gain
+
+# Augmentation settings
+augmentation:
+  hsv_h: 0.015       # Hue augmentation
+  hsv_s: 0.7         # Saturation augmentation
+  hsv_v: 0.4         # Value augmentation
+  degrees: 15.0      # Rotation (+/- deg)
+  translate: 0.1     # Translation (+/- fraction)
+  scale: 0.5         # Scale (+/- gain)
+  fliplr: 0.5        # Horizontal flip probability
+  flipud: 0.5        # Vertical flip probability (useful for space images)
+  mosaic: 1.0        # Mosaic augmentation probability
+  mixup: 0.1         # Mixup augmentation probability

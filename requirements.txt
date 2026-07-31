@@ -1,0 +1,31 @@
+# DeepSpaceVision - Dependencies
+# ================================
+
+# Core ML Framework
+ultralytics>=8.0.0        # YOLOv8
+torch>=2.0.0              # PyTorch
+torchvision>=0.15.0       # PyTorch Vision
+
+# Computer Vision
+opencv-python>=4.8.0      # OpenCV
+Pillow>=10.0.0            # Image processing
+
+# Data Science
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Astronomy Tools
+astropy>=5.3              # FITS file handling & astronomy utilities
+astroquery>=0.4           # Query astronomical databases
+
+# Utilities
+tqdm>=4.65.0              # Progress bars
+pyyaml>=6.0               # YAML config parsing
+requests>=2.31.0          # HTTP requests
+gdown>=4.7.0              # Google Drive downloads
+albumentations>=1.3.0     # Advanced augmentations
+
+# Colab / Notebook
+ipywidgets>=8.0.0         # Interactive widgets
